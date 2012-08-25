@@ -1,0 +1,83 @@
+<Profile>
+	<Name>[A1 - Inferno] Champion-Hunting 2.2 Antidote - Old Tristram</Name>
+	<KillMonsters>True</KillMonsters>
+	<PickupLoot>True</PickupLoot>
+	<GameParams quest="72801" step="36" act="A1" difficulty="Inferno" resumeFromSave="False" isPrivate="True" numGames="-1"  />
+	<Order>
+		<!-- Sakroth amd Darkcellar -->
+		<If condition="Me.IsInTown==False">   
+			<UseTownPortal questId="1" />       
+		</If>
+		<UseWaypoint questId="1" actorId="223757" x="2981.259" y="2836.146" z="24.89399" waypointNumber="1" />
+		<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="20" killRadius="15" />
+		<WaitTimer questId="1" waitTime="1000" />
+		<MoveTo questId="1" x="2084.055" y="2779.411" z="40.15685" pathPrecision="1" />
+		<MoveTo questId="1" x="2112.239" y="2739.403" z="40.15685" pathPrecision="1" />
+		<MoveTo questId="1" x="2097.501" y="2715.499" z="40.58057" pathPrecision="1" />
+		<If condition="ActorExistsAt(176007, 2091.286, 2713.581, 38.63626, 10) and Zeta.ZetaDia.CurrentWorldId==71150">
+			<UseObject questId="1" actorId="176007" x="2097.501" y="2715.499" z="40.58057" isPortal="True" destinationWorldId="107050" />
+			<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="80" killRadius="60" />
+			<WaitTimer waitTime="1000" />
+		</If>
+		<If condition="Zeta.ZetaDia.CurrentWorldId==107050">
+			<MoveTo questId="1" x="165.4815" y="99.12804" z="0.1" pathPrecision="1" />
+			<MoveTo questId="1" x="86.32607" y="99.61207" z="0.1" pathPrecision="1" />
+			<While condition="Zeta.ZetaDia.CurrentWorldId==107050">
+				<MoveTo questId="1" x="165.4815" y="99.12804" z="0.1" pathPrecision="1" />
+				<WaitTimer waitTime="2200" />
+				<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="20" killRadius="15" />
+				<UseObject questId="1" actorId="176007" x="168.7561" y="81.91547" z="0.1000018" isPortal="True" destinationWorldId="71150" />
+			</While>
+		</If>
+		<If condition="ActorExistsAt(176007, 2091.286, 2713.581, 38.63626, 10) and Zeta.ZetaDia.CurrentWorldId==71150">
+			<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="20" killRadius="15" />
+			<MoveTo questId="1" x="2105.851" y="2712.238" z="40.15685" pathPrecision="1" />
+		</If>
+		<MoveTo questId="1" x="2102.407" y="2678.039" z="40.15685" pathPrecision="1" />
+		<MoveTo questId="1" x="1993.658" y="2652.316" z="39.27268" pathPrecision="1" />
+		<MoveTo questId="1" x="2093.764" y="2505.57" z="27.1" pathPrecision="1" />
+		<If condition="ActorExistsAt(176007, 2059.629, 2478.667, 27.02374, 15) and Zeta.ZetaDia.CurrentWorldId==71150">
+			<MoveTo questId="1" x="2065.132" y="2479.12" z="27.37545" pathPrecision="1" />
+			<ToggleTargeting questId="1" combat="False" looting="False" lootRadius="70" killRadius="30" />
+			<UseObject questId="1" actorId="176007" x="2054.6" y="2476.354" z="26.32902" isPortal="True" destinationWorldId="106746" />
+			<WaitTimer waitTime="1000" />
+		</If>
+		<If condition="Zeta.ZetaDia.CurrentWorldId==106746">
+			<MoveTo questId="1" x="117.0223" y="131.3793" z="0.1000004" pathPrecision="1" />
+			<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="30" />
+			<MoveTo questId="1" x="120.2726" y="101.8894" z="0.1000009" pathPrecision="1" />
+			<While condition="Zeta.ZetaDia.CurrentWorldId==106746">
+				<WaitTimer waitTime="2200" />
+				<MoveTo questId="1" x="118.5923" y="156.2792" z="0.1000009" pathPrecision="1" />
+				<MoveTo questId="1" x="74" y="160" z="1.411117" pathPrecision="1" />
+				<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="20" killRadius="15" />
+				<UseObject questId="1" actorId="175467" x="70.01229" y="160.1366" z="3.331772" isPortal="True" destinationWorldId="71150" />
+			</While>
+		</If>
+		<MoveTo questId="1" x="2103.868" y="2512.28" z="27.1" pathPrecision="1" />
+		<MoveTo questId="1" x="2271.255" y="2505.698" z="27.1" pathPrecision="1" />
+		<MoveTo questId="1" x="2296.968" y="2535.858" z="27.1" pathPrecision="1" />
+		<MoveTo questId="1" x="2318.666" y="2665.405" z="27.1" pathPrecision="1" />
+		<MoveTo questId="1" x="2360.588" y="2777.375" z="27.1" pathPrecision="1" />
+		<MoveTo questId="1" x="2367.45" y="2796.928" z="27.1" pathPrecision="1" />
+		<MoveTo questId="1" x="2357.261" y="2808.897" z="28.16945" pathPrecision="1" />
+		<If condition="ActorExistsAt(176007, 2357.131, 2808.588, 28.2012, 10) and Zeta.ZetaDia.CurrentWorldId==71150">
+			<UseObject questId="1" actorId="176007" x="2357.131" y="2808.588" z="28.2012" isPortal="True" destinationWorldId="80730" />
+			<WaitTimer waitTime="1000" />
+		</If>
+		<If condition="Zeta.ZetaDia.CurrentWorldId==80730">
+			<MoveTo questId="1" x="91.22421" y="118.3275" z="0.1000005" pathPrecision="1" />
+			<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="30" />
+			<MoveTo questId="1" x="146.4425" y="85.62385" z="0.1000003" pathPrecision="1" />
+			<While condition="Zeta.ZetaDia.CurrentWorldId==80730">
+				<WaitTimer waitTime="2200" />
+				<MoveTo questId="1" x="112.8196" y="140.6415" z="0.1000005" pathPrecision="1" />
+				<UseTownPortal questId="1" />
+			</While>
+		</If>
+		<If condition="Me.IsInTown==False">   
+			<UseTownPortal questId="1" />       
+		</If>
+		<Continue profile="Antidote_START_HERE.xml" />
+	</Order>
+</Profile>

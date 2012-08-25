@@ -1,0 +1,66 @@
+<Profile>
+	<Name>[A1 - Inferno] Champion-Hunting 2.2 Antidote - Leorics manor + Leorics hunting grounds A</Name>
+	<KillMonsters>True</KillMonsters>
+	<PickupLoot>True</PickupLoot>
+	<GameParams quest="72801" step="36" act="A1" difficulty="Inferno" resumeFromSave="False" isPrivate="True" numGames="-1"  />
+	<Order>
+		<If condition="(not Me.IsInTown)">   
+			<UseTownPortal questId="1" />       
+		</If>
+		<!-- Leorics Manor -->
+		<UseWaypoint questId="1" actorId="223757" x="2981.259" y="2836.146" z="24.89399" waypointNumber="13" />
+		<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="30" killRadius="30" />
+		<WaitTimer questId="1" waitTime="1000" />
+		<MoveTo questId="1" x="370.0969" y="364.3543" z="12.94672" name="Manor #1" />
+		<MoveTo questId="1" x="334.6541" y="435.7069" z="26.7041" name="Manor #2" />
+		<MoveTo questId="1" x="372.3104" y="462.2404" z="26.60042" name="Manor #3" />
+		<MoveTo questId="1" x="348.1025" y="534.7822" z="26.30818" name="Manor #4" />
+		<MoveTo questId="1" x="429.9407" y="538.0175" z="26.30819" name="Manor #5" />
+		<MoveTo questId="1" x="464.4722" y="582.8935" z="26.30818" name="Manor #6" />
+		<MoveTo questId="1" x="370.2798" y="647.0622" z="3.325293" name="Manor #7" />
+		<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="60" killRadius="60" />
+		<MoveTo questId="1" x="340.6444" y="652.0143" z="3.239972" name="Look blizzard" pathPrecision="1" />
+		<MoveTo questId="1" x="276.5247" y="612.0922" z="3.239971" name=",im a human" pathPrecision="1" />
+		<MoveTo questId="1" x="431.4394" y="627.2319" z="3.239975" name="with a brain" pathPrecision="1" />
+		<MoveTo questId="1" x="369.9667" y="676.8906" z="3.239972" name="made out of metal!" pathPrecision="1" />
+		<MoveTo questId="1" x="367.9908" y="761.2645" z="3.240645" name="Manor #FinalStep" />  
+		<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="80" killRadius="60" />	
+		<UseObject questId="1" stepId="1" levelArea="1999568897" actorId="176536" isPortal="True" destinationWorldId="71150" x="369,8021" y="779,1453" z="3,733951" />
+		<WaitTimer questId="1" waitTime="50" />
+		<MoveTo questId="1" x="1077.335" y="3535.774" z="78.52599" name="Outside Manor #1" pathPrecision="1" />
+		<MoveTo questId="1" x="951.3288" y="3484.345" z="78.09126" name="Outside Manor #2" pathPrecision="1" />
+		<MoveTo questId="1" x="996.4893" y="3407.049" z="62.28057" name="Outside Manor #3" pathPrecision="1" />
+		<MoveTo questId="1" x="958.011" y="3369.86" z="63.17937" name="Outside Manor #4" pathPrecision="1" />
+		<MoveTo questId="1" x="1085.687" y="3434.638" z="62.09126" name="Outside Manor #5" pathPrecision="1" />
+		<MoveTo questId="1" x="1174.584" y="3382.356" z="63.96574" name="Outside Manor #6" pathPrecision="1" />
+		<MoveTo questId="1" x="1206.919" y="3476.581" z="77.86015" name="Outside Manor #7" pathPrecision="1" />
+		<MoveTo questId="1" x="1076.523" y="3542.832" z="78.09142" name="Outside Manor #8" pathPrecision="1" />
+		<MoveTo questId="1" x="1080.838" y="3603.76" z="83.80707" name="Bridge #1" pathPrecision="1" />
+		<MoveTo questId="1" x="1080.838" y="3603.76" z="83.80707" name="Bridge #2" pathPrecision="1" />
+		<MoveTo questId="1" x="1078.349" y="3723.487" z="78.10001" name="Hunting Grounds #1" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="1010.177" y="3742.124" z="80.1" name="Hunting Grounds #1" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="978.6772" y="3719.594" z="80.1" name="Hunting Grounds #2" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="921.476" y="3719.968" z="80.1" name="Hunting Grounds #3" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="932.5502" y="3788.289" z="90.10011" name="Hunting Grounds #4" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="845.8578" y="3837.767" z="90.1" name="Hunting Grounds #5" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="921.6693" y="3873.666" z="90.1" name="Hunting Grounds #6" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="904.435" y="3924.286" z="89.61728" name="Hunting Grounds #7" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="944.1309" y="3939.021" z="80.1" name="Hunting Grounds #8" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="937.212" y="4006.531" z="80.13879" name="Hunting Grounds #9" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="1010.389" y="4022.666" z="80.1" name="Hunting Grounds #10" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="1029.103" y="3964.59" z="80.1" name="Hunting Grounds #11" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="1026.778" y="3876.29" z="80.10001" name="Hunting Grounds #12" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="1040.805" y="3749.726" z="80.10001" name="Hunting Grounds #13" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="1142.619" y="3738.13" z="80.10001" name="Hunting Grounds #14" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="1242.117" y="3758.36" z="80.1" name="Hunting Grounds #15" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="1259.432" y="3902.834" z="78.10001" name="Hunting Grounds #16" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="1256.168" y="3972.593" z="80.10001" name="Hunting Grounds #17" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="1209.485" y="4032.965" z="80.10003" name="Hunting Grounds #18" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="1073.838" y="4054.352" z="80.1" name="Hunting Grounds #19" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="1130.926" y="3971.971" z="80.1" name="Hunting Grounds #20" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="1142.127" y="3777.766" z="80.10001" name="Hunting Grounds #21" pathPrecision="1" unsafeRandomDistance="5" />
+		<!-- Leorics Manor -Complete- -->
+		<UseTownPortal questId="1" />
+		<Continue profile="Antidote_FesteringWoodsA.xml" profileB="Antidote_FesteringWoodsB.xml"/>
+	</Order>
+</Profile>

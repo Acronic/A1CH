@@ -1,0 +1,84 @@
+<Profile>
+	<Name>[A1 - Inferno] Champion-Hunting 2.2 Antidote - Weeping Hollow A</Name>
+	<KillMonsters>True</KillMonsters>
+	<PickupLoot>True</PickupLoot>
+	<GameParams quest="72801" step="36" act="A1" difficulty="Inferno" resumeFromSave="False" isPrivate="True" numGames="-1"  />
+	<Order>
+		<If condition="(not Me.IsInTown)">   
+			<UseTownPortal questId="1" />       
+		</If>
+		<!-- WEEPING HOLLOW -->
+		<MoveTo questId="1" x="2981.259" y="2836.146" z="24.89399" pathPrecision="1" />
+		<UseWaypoint questId="1" actorId="223757" x="2981.259" y="2836.146" z="24.89399" waypointNumber="6" />
+		<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="40" killRadius="30" />
+		<WaitTimer questId="1" waitTime="1000" />
+		<WaitTimer questId="1" waitTime="1000" />
+		<MoveTo questId="1" x="2149.099" y="1868.173" z="0.4677601" name="Scarry Place 1" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2114.951" y="1892.535" z="0.6034967" name="Scarry Place 2" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2052.489" y="1886.321" z="0.1000009" name="Scarry Place 3" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2040.988" y="1804.389" z="0.1000019" name="Scarry Place 4" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2077.912" y="1788.894" z="0.1000001" name="Scarry Place 5" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2123.929" y="1813.302" z="0.1986114" name="Scarry Place 6" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2114.793" y="1752.1" z="0.4072596" name="Scarry Place 7" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2179.478" y="1797.636" z="0.1000006" name="Scarry Place 8" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2203.108" y="1862.23" z="0.6034967" name="Scarry Place 9" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2194.919" y="1903.74" z="0.1" name="Scarry Place 10" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2213.684" y="1908.129" z="5.320328" name="Scarry Place 11" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2187.826" y="1897.035" z="0.1000002" name="Scarry Place 12" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2215.658" y="1859.501" z="0.6034969" name="Scarry Place 13" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2215.658" y="1859.501" z="0.6034969" name="Scarry Place 14" pathPrecision="2" />
+		<WaitTimer questId="1" waitTime="500" />
+		<MoveTo questId="1" x="2230.206" y="1860.881" z="0.4109631" name="Gate #1" />
+		<MoveTo questId="1" x="2290.913" y="1860.035" z="0.4109633" name="Gate #2" />
+		<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="30" killRadius="15" />
+		<MoveTo questId="1" x="2329.216" y="1823.935" z="0.1" name="Hollow #1" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2386.777" y="1780.939" z="0.1000001" name="Hollow #2" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2419.792" y="1696.869" z="0.1" name="Hollow #3" pathPrecision="1" unsafeRandomDistance="5" />
+		<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="80" killRadius="60" />
+		<MoveTo questId="1" x="2469.063" y="1676.41" z="0.1000001" name="Hollow #4" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2458.6" y="1797.502" z="0.1000001" name="Hollow #5" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2433.633" y="1898.371" z="0.1000001" name="Hollow #6" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2458.189" y="1961.192" z="0.1000042" name="Hollow #7" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2405.441" y="2036.852" z="0.1000001" name="Hollow #8" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2411.551" y="2044.881" z="0.1" name="Hollow #9" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2345.118" y="2032.251" z="0.1000001" name="Hollow #10" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2272.112" y="2007.203" z="0.1000005" name="Hollow #11" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2175.073" y="2034.384" z="0.1000005" name="Hollow #12" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2264.897" y="2090.852" z="0.1127135" name="Hollow #13" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2344.683" y="2069.261" z="0.1" name="Hollow #14" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2393.779" y="2114.318" z="0.09999993" name="Hollow #15" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2461.444" y="2157.376" z="0.1" name="Hollow #16" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2468.615" y="2060.422" z="0.09999999" name="Hollow #16" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2548.814" y="2058.598" z="0.09999666" name="Hollow #17" pathPrecision="5" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2525.349" y="2033.788" z="0.09073298" name="Hollow #18" pathPrecision="5" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2560.336" y="1919.615" z="0.1000153" name="Hollow #19" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2589.577" y="1852.684" z="0.09999974" name="Hollow #20" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2565.984" y="1774.884" z="0.0999999" name="Hollow #21" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2652.793" y="1861.648" z="0.1" name="Hollow #1" pathPrecision="10" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2759.61" y="1915.227" z="0.1000016" name="Hollow #22" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2843.746" y="1838.726" z="0.1000019" name="Hollow #23" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2884.519" y="1872.731" z="0.1000002" name="Hollow #24" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2833.594" y="1961.932" z="0.09999991" name="Hollow #25" pathPrecision="5" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2837.227" y="2036.783" z="0.1" name="Hollow #26" pathPrecision="5" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2933.312" y="2036.947" z="0.09999999" name="Hollow #27" pathPrecision="5" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2937.908" y="1968.655" z="0.0999998" name="Hollow #28" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2949.405" y="1901.075" z="0.09999999" name="Hollow #29" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2983.946" y="1943.921" z="0.09999999" name="Hollow #30" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2968.713" y="2159.338" z="0.1" name="Hollow #31" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2938.96" y="2236.165" z="0.1029141" name="Hollow #32" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2894.493" y="2287.245" z="0.1004174" name="Hollow #33" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2791.042" y="2285.208" z="0.1000002" name="Hollow #34" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2835.405" y="2149.267" z="0.1" name="Hollow #35" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2742.098" y="2148.445" z="0.8200551" name="Hollow #36" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2685.773" y="2219.78" z="0.1" name="Hollow #37" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2686.159" y="2306.562" z="0.1000138" name="Hollow #38" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2627.649" y="2229.744" z="0.09999975" name="Hollow #39" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2634.634" y="2131.746" z="0.07509035" name="Hollow #40" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2725.83" y="2050.794" z="0.1000153" name="Hollow #41" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2688.459" y="1978.775" z="0.1000154" name="Hollow #42" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2595.167" y="2045.76" z="0.1000153" name="Hollow #43" pathPrecision="1" unsafeRandomDistance="5" />
+		<!-- Weeping Hollow -Complete- -->
+		<UseTownPortal questId="1" />
+		<Continue profile="Antidote_FieldsofMiseryA.xml" profileB="Antidote_FieldsofMiseryB.xml"/>
+	</Order>
+</Profile>

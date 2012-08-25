@@ -1,0 +1,257 @@
+<Profile>
+	<Name>[A1 - Inferno] Champion-Hunting 2.2 Antidote - Festering Woods B</Name>
+	<KillMonsters>True</KillMonsters>
+	<PickupLoot>True</PickupLoot>
+	<GameParams quest="72801" step="36" act="A1" difficulty="Inferno" resumeFromSave="False" isPrivate="True" numGames="-1"  />
+	<Order>
+		<If condition="(not Me.IsInTown)">   
+			<UseTownPortal questId="1" />       
+		</If>
+		<!-- Festering Woods -->
+		<UseWaypoint questId="1" actorId="223757" x="2981.259" y="2836.146" z="24.89399" waypointNumber="8" />
+		<WaitTimer questId="1" waitTime="500" />
+		<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="30" />
+		<MoveTo questId="1" x="1261.022" y="797.6718" z="61.18635" name="Road to Festering #1" pathPrecision="1" />
+		<MoveTo questId="1" x="1257.752" y="753.2078" z="44.86698" name="Road to Festering #2" pathPrecision="1" />
+		<MoveTo questId="1" x="1202.971" y="745.399" z="45.0059" name="Road to Festering #3" pathPrecision="1" />
+		<MoveTo questId="1" x="1186.53" y="741.8652" z="47.67584" name="Road to Festering #4" pathPrecision="1" />
+		<MoveTo questId="1" x="1162.965" y="738.3774" z="50.66218" name="Road to Festering #5" pathPrecision="1" />
+		<MoveTo questId="1" x="998.0164" y="749.0766" z="40.96234" name="Road to Festering #6" pathPrecision="1" />
+		<MoveTo questId="1" x="869.1569" y="782.9664" z="20.72505" name="Road to Festering #7" pathPrecision="1" />
+		<MoveTo questId="1" x="820.2462" y="720.1617" z="20.1" name="Festering Woods #1" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="769.9112" y="687.8804" z="20.1" name="Festering Woods #2" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="769.9112" y="687.8804" z="20.1" name="Festering Woods #3" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="624.4871" y="610.2111" z="20.1" name="Festering Woods #4" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="556.2459" y="597.6021" z="20.1" name="Festering Woods #5" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="473.0233" y="604.419" z="20.1" name="Festering Woods #6" pathPrecision="1" />
+		<MoveTo questId="1" x="374.1458" y="590.9266" z="20.1" name="Festering Woods #7" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="231.5672" y="584.8051" z="20.1" name="Festering Woods #8" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="228.4338" y="664.8621" z="20.1" name="Looking for Warrior's Rest #1" pathPrecision="1" />
+		<If condition="ActorExistsAt(176008, 285.247, 666.2519, 16.06892, 15)  and Zeta.ZetaDia.CurrentWorldId==71150">
+			<ToggleTargeting questId="1" combat="False" looting="False" lootRadius="70" killRadius="30" />
+			<WaitTimer waitTime="100" />
+			<MoveTo questId="1" x="279.0309" y="724.4062" z="20.1" name="In #1" pathPrecision="1" />
+			<MoveTo questId="1" x="305.1674" y="714.014" z="20.1" name="In #2" pathPrecision="1" />
+			<MoveTo questId="1" x="321.4475" y="693.8344" z="20.17813" name="In #3" pathPrecision="1" />
+			<MoveTo questId="1" x="313.0526" y="678.5666" z="15.85017" name="In #4" pathPrecision="1" />
+			<MoveTo questId="1" x="287.9381" y="672.7042" z="15.82301" name="In #5" pathPrecision="1" />
+			<UseObject questId="1" x="285.5723" y="668.7137" z="16.03158" actorId="176008" isPortal="True" destinationWorldId="60393" />
+		</If>
+		<If condition="Zeta.ZetaDia.CurrentWorldId==60393">
+			<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="30" />
+			<WaitTimer waitTime="100" />
+			<MoveTo name="Step 1" questId="1" x="374.8354" y="285.2496" z="0.1000205" />
+			<MoveTo name="Step 2" questId="1" x="335.8906" y="297.6104" z="0.1000305" />
+			<MoveTo name="Step 3" questId="1" x="287.7101" y="314.6879" z="7.308491" />
+			<MoveTo name="Step 4" questId="1" x="265.7111" y="324.843" z="7.751245" />
+			<MoveTo name="Step 5" questId="1" x="236.8198" y="339.7128" z="0.5523124" />
+			<MoveTo name="Step 6" questId="1" x="212.5869" y="358.4189" z="0.10003" />
+			<MoveTo name="Step 7" questId="1" x="186.1447" y="370.7687" z="0.1000176" />
+			<While condition="Zeta.ZetaDia.CurrentWorldId==60393">
+				<WaitTimer waitTime="100" />
+				<MoveTo questId="1" x="402.1971" y="267.5492" z="0.1000305" pathPrecision="5" />
+				<WaitTimer waitTime="100" />
+				<ToggleTargeting questId="1" combat="False" looting="False" lootRadius="70" killRadius="30" />
+				<UseObject questId="1" x="418.5931" y="246.5663" z="4.314868" actorId="176008" isPortal="True" destinationWorldId="71150" />
+				<WaitTimer waitTime="100" />
+			</While>
+		</If>
+		<If condition="ActorExistsAt(176008, 285.247, 666.2519, 16.06892, 15)  and Zeta.ZetaDia.CurrentWorldId==71150">
+			<MoveTo questId="1" x="313.0526" y="678.5666" z="15.85017" name="Out #1" pathPrecision="1" />
+			<MoveTo questId="1" x="321.4475" y="693.8344" z="20.17813" name="Out #2" pathPrecision="1" />
+			<MoveTo questId="1" x="305.1674" y="714.014" z="20.1" name="Out #3" pathPrecision="1" />
+			<MoveTo questId="1" x="279.0309" y="724.4062" z="20.1" name="Out #4" pathPrecision="1" />
+			<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="30" />
+		</If>
+		<MoveTo questId="1" x="226.6845" y="687.008" z="20.1" name="Festering Woods #9" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="233.8941" y="893.9667" z="20.1" name="Festering Woods #10" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="264.9545" y="957.0999" z="20.1" name="Festering Woods #11" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="308.4615" y="962.7083" z="20.1" name="Festering Woods #12" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="370.9303" y="960.3871" z="20.1" name="Looking for CotA #3" pathPrecision="1" />
+		<If condition="ActorExistsAt(176008, 306.6887, 876.4686, 16.03057, 15)  and Zeta.ZetaDia.CurrentWorldId==71150">
+			<ToggleTargeting questId="1" combat="False" looting="False" lootRadius="70" killRadius="30" />
+			<WaitTimer waitTime="100" />
+			<MoveTo questId="1" x="338.6352" y="920.71" z="20.1273" name="In #1" pathPrecision="1"/>
+			<MoveTo questId="1" x="324.7045" y="898.0819" z="17.88341" name="In #2" pathPrecision="1"/>
+			<MoveTo questId="1" x="323.1196" y="887.4232" z="17.39608" name="In #3" pathPrecision="1"/>
+			<UseObject questId="1" x="315.0742" y="880.1865" z="15.85664" actorId="176008" isPortal="True" destinationWorldId="60394" />
+		</If>
+		<If condition="Zeta.ZetaDia.CurrentWorldId==60394">
+			<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="30" />
+			<MoveTo questId="1" x="318.567" y="228.7159" z="-9.290613" pathPrecision="5" />
+			<MoveTo questId="1" x="236.7522" y="361.2693" z="-16.84969" pathPrecision="5" />
+			<MoveTo questId="1" x="148.5845" y="338.6848" z="-14.60206" pathPrecision="5" />
+			<MoveTo questId="1" x="256.621" y="381.7021" z="-17.75699" pathPrecision="5" />
+			<MoveTo questId="1" x="298.8536" y="379.7181" z="-37.90237" pathPrecision="5" />
+			<While condition="Zeta.ZetaDia.CurrentWorldId==60394">
+				<WaitTimer waitTime="100" />
+				<MoveTo questId="1" x="236.1708" y="376.3336" z="-15.05489" pathPrecision="1" />
+				<MoveTo questId="1" x="297.7783" y="250.1982" z="-10.12247" pathPrecision="1" />
+				<MoveTo questId="1" x="285.0051" y="201.6187" z="-6.497152" pathPrecision="1" />
+				<WaitTimer waitTime="1000" />
+				<ToggleTargeting questId="1" combat="False" looting="False" lootRadius="70" killRadius="30" />
+				<UseObject questId="1" x="273.4551" y="184.6861" z="-5.969828" actorId="176008" isPortal="True" destinationWorldId="71150" />
+				<WaitTimer waitTime="100" />
+			</While>
+		</If>
+		<If condition="ActorExistsAt(176008, 306.6887, 876.4686, 16.03057, 15)  and Zeta.ZetaDia.CurrentWorldId==71150">
+			<MoveTo questId="1" x="323.1196" y="887.4232" z="17.39608" name="Out #1" pathPrecision="1"/>
+			<MoveTo questId="1" x="324.7045" y="898.0819" z="17.88341" name="Out #2" pathPrecision="1"/>
+			<MoveTo questId="1" x="338.6352" y="920.71" z="20.1273" name="Out #3" pathPrecision="1"/>
+			<MoveTo questId="1" x="356.9457" y="932.0084" z="20.1" name="Out #4" pathPrecision="1" />
+			<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="30" />
+		</If>
+		<MoveTo questId="1" x="472.3513" y="973.9438" z="20.1" name="Festering Woods #13" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="433.91" y="965.3154" z="20.1" name="Looking for CotA #2" pathPrecision="1" />
+		<If condition="ActorExistsAt(176008, 428.1892, 878.0865, 16.03252, 15)  and Zeta.ZetaDia.CurrentWorldId==71150">
+			<ToggleTargeting questId="1" combat="False" looting="False" lootRadius="70" killRadius="30" />
+			<WaitTimer waitTime="100" />
+			<MoveTo questId="1" x="471.5331" y="928.3871" z="20.1" name="In #1" pathPrecision="1" />
+			<MoveTo questId="1" x="452.0205" y="918.7938" z="20.23692" name="In #2" pathPrecision="1" />
+			<MoveTo questId="1" x="440.5163" y="900.6396" z="16.39473" name="In #3" pathPrecision="1" />
+			<MoveTo questId="1" x="438.1875" y="884.9135" z="15.97724" name="In #4" pathPrecision="1" />
+			<UseObject questId="1" x="434.8253" y="883.5191" z="15.85076" actorId="176008" isPortal="True" destinationWorldId="60394" />
+		</If>
+		<If condition="Zeta.ZetaDia.CurrentWorldId==60394">
+			<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="30" />
+			<MoveTo questId="1" x="318.567" y="228.7159" z="-9.290613" pathPrecision="5" />
+			<MoveTo questId="1" x="236.7522" y="361.2693" z="-16.84969" pathPrecision="5" />
+			<MoveTo questId="1" x="148.5845" y="338.6848" z="-14.60206" pathPrecision="5" />
+			<MoveTo questId="1" x="256.621" y="381.7021" z="-17.75699" pathPrecision="5" />
+			<MoveTo questId="1" x="298.8536" y="379.7181" z="-37.90237" pathPrecision="5" />
+			<While condition="Zeta.ZetaDia.CurrentWorldId==60394">
+				<WaitTimer waitTime="100" />
+				<MoveTo questId="1" x="236.1708" y="376.3336" z="-15.05489" pathPrecision="1" />
+				<MoveTo questId="1" x="297.7783" y="250.1982" z="-10.12247" pathPrecision="1" />
+				<MoveTo questId="1" x="285.0051" y="201.6187" z="-6.497152" pathPrecision="1" />
+				<WaitTimer waitTime="1000" />
+				<ToggleTargeting questId="1" combat="False" looting="False" lootRadius="70" killRadius="30" />
+				<UseObject questId="1" x="273.4551" y="184.6861" z="-5.969828" actorId="176008" isPortal="True" destinationWorldId="71150" />
+				<WaitTimer waitTime="1000" />
+				<MoveTo questId="1" x="442.4449" y="907.395" z="17.05136" name="Anti-Stuck" pathPrecision="2"/>
+			</While>
+		</If>
+		<If condition="ActorExistsAt(176008, 428.1892, 878.0865, 16.03252, 15)  and Zeta.ZetaDia.CurrentWorldId==71150">
+			<MoveTo questId="1" x="438.1875" y="884.9135" z="15.97724" name="Out #1" pathPrecision="1" />
+			<MoveTo questId="1" x="440.5163" y="900.6396" z="16.39473" name="Out #2" pathPrecision="1" />
+			<MoveTo questId="1" x="452.0205" y="918.7938" z="20.23692" name="Out #3" pathPrecision="1" />
+			<MoveTo questId="1" x="471.5331" y="928.3871" z="20.1" name="Out #4" pathPrecision="1" />
+			<MoveTo questId="1" x="433.91" y="965.3154" z="20.1" name="Out #5" pathPrecision="1" />
+			<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="30" />
+		</If>
+		<MoveTo questId="1" x="560.3186" y="971.1917" z="20.1" name="Festering Woods #14" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="630.9247" y="980.8862" z="20.1" name="Festering Woods #15" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="600.9124" y="906.9619" z="20.1" name="Looking for CotA #3" pathPrecision="1" />
+		<If condition="ActorExistsAt(176008, 546.2001, 876.5851, 16.02718, 15)  and Zeta.ZetaDia.CurrentWorldId==71150">
+			<ToggleTargeting questId="1" combat="False" looting="False" lootRadius="70" killRadius="30" />
+			<WaitTimer waitTime="100" />
+			<MoveTo questId="1" x="581.181" y="920.6775" z="20.1" name="In #1" pathPrecision="1" />
+			<MoveTo questId="1" x="568.0519" y="912.9675" z="19.69943" name="In #2" pathPrecision="1" />
+			<MoveTo questId="1" x="561.685" y="901.7787" z="16.8247" name="In #3" pathPrecision="1" />
+			<MoveTo questId="1" x="559.4897" y="887.8422" z="16.25267" name="In #4" pathPrecision="1" />
+			<UseObject questId="1" x="555.1432" y="883.5889" z="15.85017" actorId="176008" isPortal="True" destinationWorldId="60394" />
+		</If>
+		<If condition="Zeta.ZetaDia.CurrentWorldId==60394">
+			<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="30" />
+			<MoveTo questId="1" x="318.567" y="228.7159" z="-9.290613" pathPrecision="5" />
+			<MoveTo questId="1" x="236.7522" y="361.2693" z="-16.84969" pathPrecision="5" />
+			<MoveTo questId="1" x="148.5845" y="338.6848" z="-14.60206" pathPrecision="5" />
+			<MoveTo questId="1" x="256.621" y="381.7021" z="-17.75699" pathPrecision="5" />
+			<MoveTo questId="1" x="298.8536" y="379.7181" z="-37.90237" pathPrecision="5" />
+			<While condition="Zeta.ZetaDia.CurrentWorldId==60394">
+				<WaitTimer waitTime="100" />
+				<MoveTo questId="1" x="236.1708" y="376.3336" z="-15.05489" pathPrecision="1" />
+				<MoveTo questId="1" x="297.7783" y="250.1982" z="-10.12247" pathPrecision="1" />
+				<MoveTo questId="1" x="285.0051" y="201.6187" z="-6.497152" pathPrecision="1" />
+				<WaitTimer waitTime="1000" />
+				<ToggleTargeting questId="1" combat="False" looting="False" lootRadius="70" killRadius="30" />
+				<UseObject questId="1" x="273.4551" y="184.6861" z="-5.969828" actorId="176008" isPortal="True" destinationWorldId="71150" />
+				<WaitTimer waitTime="100" />
+			</While>
+		</If>
+		<If condition="ActorExistsAt(176008, 546.2001, 876.5851, 16.02718, 15)  and Zeta.ZetaDia.CurrentWorldId==71150">
+			<MoveTo questId="1" x="559.4897" y="887.8422" z="16.25267" name="Out #1" pathPrecision="1" />
+			<MoveTo questId="1" x="561.685" y="901.7787" z="16.8247" name="Out #2" pathPrecision="1" />
+			<MoveTo questId="1" x="568.0519" y="912.9675" z="19.69943" name="Out #3" pathPrecision="1" />
+			<MoveTo questId="1" x="581.181" y="920.6775" z="20.1" name="Out #4" pathPrecision="1" />
+			<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="30" />
+		</If>
+		<MoveTo questId="1" x="604.6434" y="816.7404" z="20.1" name="Festering Woods #16" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="607.6728" y="734.7136" z="20.1" name="Festering Woods #17" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="549.9586" y="719.5341" z="20.1" name="Looking for Warrior's Rest #2" pathPrecision="1" />
+		<If condition="ActorExistsAt(176008, 522.1671, 666.3508, 16.07448, 15)  and Zeta.ZetaDia.CurrentWorldId==71150">
+			<ToggleTargeting questId="1" combat="False" looting="False" lootRadius="70" killRadius="30" />
+			<WaitTimer waitTime="100" />
+			<MoveTo questId="1" x="529.9656" y="697.098" z="20.15804" name="In #1" pathPrecision="1" />
+			<UseObject questId="1" x="522.9739" y="683.4981" z="17.80379" actorId="176008" isPortal="True" destinationWorldId="60393" />
+		</If>
+		<If condition="Zeta.ZetaDia.CurrentWorldId==60393">
+			<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="30" />
+			<WaitTimer waitTime="100" />
+			<MoveTo name="Step 1" questId="1" x="374.8354" y="285.2496" z="0.1000205" />
+			<MoveTo name="Step 2" questId="1" x="335.8906" y="297.6104" z="0.1000305" />
+			<MoveTo name="Step 3" questId="1" x="287.7101" y="314.6879" z="7.308491" />
+			<MoveTo name="Step 4" questId="1" x="265.7111" y="324.843" z="7.751245" />
+			<MoveTo name="Step 5" questId="1" x="236.8198" y="339.7128" z="0.5523124" />
+			<MoveTo name="Step 6" questId="1" x="212.5869" y="358.4189" z="0.10003" />
+			<MoveTo name="Step 7" questId="1" x="186.1447" y="370.7687" z="0.1000176" />
+			<While condition="Zeta.ZetaDia.CurrentWorldId==60393">
+				<WaitTimer waitTime="100" />
+				<MoveTo questId="1" x="402.1971" y="267.5492" z="0.1000305" pathPrecision="5" />
+				<WaitTimer waitTime="100" />
+				<ToggleTargeting questId="1" combat="False" looting="False" lootRadius="70" killRadius="30" />
+				<UseObject questId="1" x="418.5931" y="246.5663" z="4.314868" actorId="176008" isPortal="True" destinationWorldId="71150" />
+				<WaitTimer waitTime="100" />
+			</While>
+		</If>
+		<If condition="ActorExistsAt(176008, 522.1671, 666.3508, 16.07448, 15)  and Zeta.ZetaDia.CurrentWorldId==71150">
+			<MoveTo questId="1" x="539.9099" y="678.2449" z="15.85017" name="Out #1" pathPrecision="1" />
+			<MoveTo questId="1" x="553.3206" y="696.8945" z="20.15821" name="Out #2" pathPrecision="1" />
+			<MoveTo questId="1" x="553.1098" y="716.242" z="20.1" name="Out #3" pathPrecision="1" />
+			<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="30" />
+		</If>
+		<MoveTo questId="1" x="480.6224" y="722.5034" z="20.1" name="Festering Woods #18" pathPrecision="1" unsafeRandomDistance="5"/>
+		<MoveTo questId="1" x="407.474" y="716.5413" z="20.1" name="Looking for Warrior's Rest #3" pathPrecision="1" />
+		<If condition="ActorExistsAt(176008, 401.3656, 666.1225, 16.08049, 15)  and Zeta.ZetaDia.CurrentWorldId==71150">
+			<ToggleTargeting questId="1" combat="False" looting="False" lootRadius="70" killRadius="30" />
+			<WaitTimer waitTime="100" />
+			<MoveTo questId="1" x="435.7175" y="705.076" z="20.1" name="In #1" pathPrecision="1" />
+			<MoveTo questId="1" x="443.6703" y="691.9478" z="20.14273" name="In #2" pathPrecision="1" />
+			<MoveTo questId="1" x="428.9582" y="677.72" z="15.85017" name="In #3" pathPrecision="1" />
+			<MoveTo questId="1" x="410.9895" y="674.8193" z="15.83524" name="In #4" pathPrecision="1" />
+			<UseObject questId="1" x="406.51" y="670.9689" z="15.95396" actorId="176008" isPortal="True" destinationWorldId="60393" />
+		</If>
+		<If condition="Zeta.ZetaDia.CurrentWorldId==60393">
+			<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="30" />
+			<WaitTimer waitTime="100" />
+			<MoveTo name="Step 1" questId="1" x="374.8354" y="285.2496" z="0.1000205" />
+			<MoveTo name="Step 2" questId="1" x="335.8906" y="297.6104" z="0.1000305" />
+			<MoveTo name="Step 3" questId="1" x="287.7101" y="314.6879" z="7.308491" />
+			<MoveTo name="Step 4" questId="1" x="265.7111" y="324.843" z="7.751245" />
+			<MoveTo name="Step 5" questId="1" x="236.8198" y="339.7128" z="0.5523124" />
+			<MoveTo name="Step 6" questId="1" x="212.5869" y="358.4189" z="0.10003" />
+			<MoveTo name="Step 7" questId="1" x="186.1447" y="370.7687" z="0.1000176" />
+			<While condition="Zeta.ZetaDia.CurrentWorldId==60393">
+				<WaitTimer waitTime="100" />
+				<MoveTo questId="1" x="402.1971" y="267.5492" z="0.1000305" pathPrecision="5" />
+				<WaitTimer waitTime="100" />
+				<ToggleTargeting questId="1" combat="False" looting="False" lootRadius="70" killRadius="30" />
+				<UseObject questId="1" x="418.5931" y="246.5663" z="4.314868" actorId="176008" isPortal="True" destinationWorldId="71150" />
+				<WaitTimer waitTime="100" />
+			</While>
+		</If>
+		<If condition="ActorExistsAt(176008, 401.3656, 666.1225, 16.08049, 15)  and Zeta.ZetaDia.CurrentWorldId==71150">
+			<MoveTo questId="1" x="428.9582" y="677.72" z="15.85017" name="Out #1" pathPrecision="1" />
+			<MoveTo questId="1" x="438.7513" y="676.563" z="15.8467" name="Out #2" pathPrecision="1" />
+			<MoveTo questId="1" x="455.0528" y="680.8185" z="20.23763" name="Out #3" pathPrecision="1" />
+			<MoveTo questId="1" x="486.0042" y="719.1387" z="20.1" name="Out #4" pathPrecision="1" />
+			<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="30" />
+		</If>
+		<MoveTo questId="1" x="362.8926" y="732.5856" z="20.1" name="Festering Woods #19" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="363.7527" y="788.1519" z="20.1" name="Festering Woods #20" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="375.1842" y="842.8657" z="20.1" name="Festering Woods #20" pathPrecision="1" unsafeRandomDistance="5" />
+		<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="60" />
+		<UseTownPortal questId="1" />
+		<Continue profile="Antidote_WeepingHollowA.xml" profileB="Antidote_WeepingHollowB.xml"/>
+	</Order>
+</Profile>
