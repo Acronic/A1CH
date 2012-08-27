@@ -78,6 +78,6 @@
 		<If condition="Me.IsInTown==False">   
 			<UseTownPortal questId="1" />       
 		</If>
-		<Continue profile="Antidote_START_HERE.xml" />
+		<LeaveGame reason="Thanks for using Ciggarc's profiles! Feel free to donate to us so we can keep doing amazing projects!" />
 	</Order>
 </Profile>
