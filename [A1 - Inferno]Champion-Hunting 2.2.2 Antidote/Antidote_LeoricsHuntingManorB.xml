@@ -1,5 +1,5 @@
 <Profile>
-	<Name>[A1 - Inferno] Champion-Hunting 2.2 Antidote - Leorics manor + Leorics hunting grounds B</Name>
+	<Name>[A1 - Inferno] Champion-Hunting 2.2.2 Antidote - Leorics manor + Leorics hunting grounds B</Name>
 	<KillMonsters>True</KillMonsters>
 	<PickupLoot>True</PickupLoot>
 	<GameParams quest="72801" step="36" act="A1" difficulty="Inferno" resumeFromSave="False" isPrivate="True" numGames="-1"  />
@@ -57,6 +57,6 @@
 		<MoveTo questId="1" x="914.9922" y="3711.282" z="80.09999" name="Hunting Grounds #18" pathPrecision="1" unsafeRandomDistance="5" />
 		<!-- Leorics Manor -Complete- -->
 		<UseTownPortal questId="1" />
-		<Continue profile="Antidote_FesteringWoodsA.xml" profileB="Antidote_FesteringWoodsB.xml"/>
+		<Continue profile="Antidote_FesteringWoodsA.xml, Antidote_FesteringWoodsB.xml" />
 	</Order>
 </Profile>

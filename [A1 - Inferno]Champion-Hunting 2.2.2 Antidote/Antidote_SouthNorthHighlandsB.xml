@@ -1,0 +1,112 @@
+<Profile>
+	<Name>[A1 - Inferno] Champion-Hunting 2.2.2 Antidote - Southern and Northern Highlands B(Ginger)</Name>
+	<KillMonsters>True</KillMonsters>
+	<PickupLoot>True</PickupLoot>
+	<GameParams quest="72801" step="36" act="A1" difficulty="Inferno" resumeFromSave="False" isPrivate="True" numGames="-1"  />
+	<Order>
+		<If condition="(not Me.IsInTown)">   
+			<UseTownPortal questId="1" />       
+		</If>
+		<!-- Highlands -->
+		<UseWaypoint questId="1" actorId="223757" x="2981.259" y="2836.146" z="24.89399" waypointNumber="11" />
+		<WaitTimer questId="1" waitTime="1000" />
+		<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="80" killRadius="60" />
+		<MoveTo questId="1" x="2312.044" y="4781.09" z="0.1330277" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2315.307" y="4868.467" z="-0.4572618" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2414.827" y="4882.856" z="1.29206" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2442.324" y="4807.304" z="-7.654932" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2410.424" y="4841.24" z="1.29206" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2385.231" y="4807.625" z="2.946137"  unsafeRandomDistance="4" pathPrecision="2"  />
+				
+		<ToggleTargeting questId="1" combat="False" looting="False" lootRadius="10" killRadius="60" />
+				<MoveTo questId="1" x="2388.478" y="4672.058" z="7.507045" unsafeRandomDistance="4" pathPrecision="2" />
+		<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="80" killRadius="60" />
+		<!-- outline -->
+		<MoveTo questId="1" x="2393.591" y="4607.817" z="-1.899993" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2464.543" y="4529.278" z="0.1000005" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2535.298" y="4351.516" z="0.100001" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2544.115" y="4168.43" z="0.1180633" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2459.149" y="4185.045" z="0.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2480.053" y="4048.127" z="0.100001" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2398.718" y="4087.301" z="0.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2533.727" y="3948.084" z="0.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2451.173" y="3916.351" z="0.1000003" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2267.42" y="3950.784" z="0.1000005" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2081.791" y="3946.158" z="0.1908644" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1986.239" y="3918.796" z="0.100001" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1986.211" y="4079.715" z="0.1000135" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1989.76" y="4300.39" z="0.1000005" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1947.102" y="4365.742" z="0.1000004" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1869.681" y="4419.057" z="0.1000001" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1901.404" y="4520.97" z="0.09999917" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2068.729" y="4535.257" z="0.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2103.553" y="4441.669" z="0.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2122.622" y="4530.597" z="0.1289742" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2228.343" y="4528.776" z="0.09999999" unsafeRandomDistance="4" pathPrecision="4" />
+		
+		<!-- fill in -->
+		<MoveTo questId="1" x="2257.641" y="4378.444" z="-1.899984" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2084.199" y="4448.051" z="0.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1983.083" y="4367.733" z="0.08095972" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2011.952" y="4193.438" z="0.1000154" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2187.544" y="4157.735" z="-1.899984" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2187.544" y="4157.735" z="-1.899984" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2198.827" y="4036.477" z="0.1134881" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2103.611" y="4073.451" z="0.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2250.098" y="4319.52" z="0.1000157"  unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2435.719" y="4317.565" z="0.1000004"  unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2386.79" y="4407.286" z="-1.899985" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="2248.966" y="4131.616" z="-1.899984" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1989.264" y="4157.749" z="-1.899984" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1925.298" y="4092.955" z="0.100025" unsafeRandomDistance="4" pathPrecision="4" name="gate" />
+		
+			<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="40" killRadius="30" />
+			<WaitTimer questId="1" waitTime="50" />
+			
+		<MoveTo questId="1" x="1911.425" y="3994.855" z="10.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1938.704" y="3929.169" z="10.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1896.531" y="3902.112" z="10.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1855.54" y="3961.116" z="20.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1810.186" y="3922.076" z="20.10261" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1855.54" y="3961.116" z="20.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1864.656" y="4092.439" z="20.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1819.544" y="4081.914" z="20.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1816.494" y="4018.484" z="30.09157" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1746.118" y="4017.141" z="38.23554" unsafeRandomDistance="4" pathPrecision="4" />
+		
+			<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="80" killRadius="60" />
+			<WaitTimer questId="1" waitTime="50" />
+			
+		<!-- Oop Norf -->
+		
+		<MoveTo questId="1" x="1746.118" y="4017.141" z="38.23554" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1724.655" y="3871.126" z="40.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1739.986" y="3828.048" z="40.09999" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1818.213" y="3824.458" z="40.09999" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1623.051" y="3808.56" z="40.1" unsafeRandomDistance="4" pathPrecision="8" />
+		<MoveTo questId="1" x="1569.325" y="3863.947" z="40.15501" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1733.465" y="4114.538" z="40.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1729.853" y="4171.942" z="40.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1777.804" y="4202.876" z="40.09999" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1729.853" y="4171.942" z="40.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1629.486" y="4158.631" z="40.10272" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1618.002" y="4229.608" z="31.87353" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1574.694" y="4158.593" z="40.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1417.884" y="4170.472" z="39.98621" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1407.071" y="4079.96" z="40.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1369.449" y="4100.58" z="40.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1505.622" y="3955.898" z="40.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1492.114" y="4033.423" z="38.29807" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1585.822" y="4087.941" z="40.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1492.114" y="4033.423" z="38.29807" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1426.471" y="4008.549" z="38.69856" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1437.875" y="3930.869" z="50.1" unsafeRandomDistance="4" pathPrecision="4" />
+		<MoveTo questId="1" x="1394.037" y="3959.26" z="50.77664" unsafeRandomDistance="4" pathPrecision="4" />
+		
+		<WaitTimer questId="1" waitTime="50" />
+		
+				<UseTownPortal questId="1" />
+		<Continue profile="Antidote_OldTristram.xml"/>
+
+	</Order>
+</Profile>

@@ -1,5 +1,5 @@
 <Profile>
-	<Name>[A1 - Inferno] Champion-Hunting 2.2 Antidote - Southern and Northern Highlands A</Name>
+	<Name>[A1 - Inferno] Champion-Hunting 2.2.2 Antidote - Southern and Northern Highlands A</Name>
 	<KillMonsters>True</KillMonsters>
 	<PickupLoot>True</PickupLoot>
 	<GameParams quest="72801" step="36" act="A1" difficulty="Inferno" resumeFromSave="False" isPrivate="True" numGames="-1"  />

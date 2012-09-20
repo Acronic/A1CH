@@ -1,5 +1,5 @@
 <Profile>
-	<Name>[A1 - Inferno] Champion-Hunting 2.2 Antidote - Fields of Misery A</Name>
+	<Name>[A1 - Inferno] Champion-Hunting 2.2.2 Antidote - Fields of Misery A</Name>
 	<KillMonsters>True</KillMonsters>
 	<PickupLoot>True</PickupLoot>
 	<GameParams quest="72801" step="36" act="A1" difficulty="Inferno" resumeFromSave="False" isPrivate="True" numGames="-1"  />
@@ -67,6 +67,6 @@
 		<MoveTo questId="1" x="1609.576" y="369.2259" z="0.1000001" name="Chuck Chuck" />
 		<!-- Fields of Misery -Complete- -->
 		<UseTownPortal questId="1" />
-		<Continue profile="Antidote_SouthNorthHighlandsA.xml" />
+		<Continue profile="Antidote_SouthNorthHighlandsA.xml, Antidote_SouthNorthHighlandsB.xml" />
 	</Order>
 </Profile>

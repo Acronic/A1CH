@@ -1,5 +1,5 @@
 <Profile>
-	<Name>[A1 - Inferno] Champion-Hunting 2.2 Antidote - Weeping Hollow B</Name>
+	<Name>[A1 - Inferno] Champion-Hunting 2.2.2 Antidote - Weeping Hollow B</Name>
 	<KillMonsters>True</KillMonsters>
 	<PickupLoot>True</PickupLoot>
 	<GameParams quest="72801" step="36" act="A1" difficulty="Inferno" resumeFromSave="False" isPrivate="True" numGames="-1"  />
@@ -57,6 +57,6 @@
 		<MoveTo questId="1" x="2436.226" y="1993.609" z="0.1000001" name="Hollow #27" pathPrecision="1" unsafeRandomDistance="5" />
 		<!-- Weeping Hollow -Complete- -->
 		<UseTownPortal questId="1" />
-		<Continue profile="Antidote_FieldsofMiseryA.xml" profileB="Antidote_FieldsofMiseryB.xml"/>
+		<Continue profile="Antidote_FieldsofMiseryA.xml, Antidote_FieldsofMiseryB.xml" />
 	</Order>
 </Profile>

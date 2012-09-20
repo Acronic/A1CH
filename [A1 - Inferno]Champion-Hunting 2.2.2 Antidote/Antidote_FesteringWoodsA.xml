@@ -1,5 +1,5 @@
 <Profile>
-	<Name>[A1 - Inferno] Champion-Hunting 2.2 Antidote - Festering Woods A</Name>
+	<Name>[A1 - Inferno] Champion-Hunting 2.2.2 Antidote - Festering Woods A</Name>
 	<KillMonsters>True</KillMonsters>
 	<PickupLoot>True</PickupLoot>
 	<GameParams quest="72801" step="36" act="A1" difficulty="Inferno" resumeFromSave="False" isPrivate="True" numGames="-1"  />
@@ -260,7 +260,7 @@
 		<MoveTo questId="1" x="300.5892" y="961.9233" z="20.1" name="Festering Woods #28" pathPrecision="1" unsafeRandomDistance="5" />
 		<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="60" />
 		<UseTownPortal questId="1" />
-		<Continue profile="Antidote_WeepingHollowA.xml" profileB="Antidote_WeepingHollowB.xml"/>
+		<Continue profile="Antidote_WeepingHollowA.xml, Antidote_WeepingHollowB.xml" />
 		<!-- Festering Woods -Complete- -->
 	</Order>
 </Profile>

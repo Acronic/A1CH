@@ -1,5 +1,5 @@
 <Profile>
-	<Name>[A1 - Inferno] Champion-Hunting 2.2 Antidote - Old Tristram</Name>
+	<Name>[A1 - Inferno] Champion-Hunting 2.2.2 Antidote - Old Tristram</Name>
 	<KillMonsters>True</KillMonsters>
 	<PickupLoot>True</PickupLoot>
 	<GameParams quest="72801" step="36" act="A1" difficulty="Inferno" resumeFromSave="False" isPrivate="True" numGames="-1"  />
@@ -78,6 +78,6 @@
 		<If condition="Me.IsInTown==False">   
 			<UseTownPortal questId="1" />       
 		</If>
-		<LeaveGame reason="Thanks for using Ciggarc's profiles! Feel free to donate to us so we can keep doing amazing projects!" />
+		<Continue profile="Antidote_START_HERE.xml" exitgame="true" />
 	</Order>
 </Profile>
