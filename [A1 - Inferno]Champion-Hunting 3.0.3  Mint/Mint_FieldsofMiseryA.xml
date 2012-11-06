@@ -1,20 +1,34 @@
 <Profile>
-	<Name>[A1 - Inferno] Champion-Hunting 2.2.2 Antidote - Fields of Misery A</Name>
+	<Name>[A1 - Inferno] Champion-Hunting 3.0.3 Mint - Fields of Misery A</Name>
 	<KillMonsters>True</KillMonsters>
 	<PickupLoot>True</PickupLoot>
 	<GameParams quest="72801" step="36" act="A1" difficulty="Inferno" resumeFromSave="False" isPrivate="True" numGames="-1"  />
 	<Order>
-		<If condition="(not Me.IsInTown)">   
-			<UseTownPortal questId="1" />       
+	
+	
+		<!-- From Town -->
+		<If condition="Me.IsInTown">
+			<MoveTo questId="1" x="2981.259" y="2836.146" z="24.89399" />
+			<WaitTimer questId="1" waitTime="150" />
+			<While condition="Me.IsInTown">
+				<UseWaypoint questId="1" actorId="223757" x="2981.259" y="2836.146" z="24.89399" waypointNumber="6" />	
+			</While>		
+			<WaitTimer questId="1" waitTime="150" />
 		</If>
-		<!-- FIELDS OF MISERY -->
-		<UseWaypoint questId="1" actorId="223757" x="2981.259" y="2836.146" z="24.89399" waypointNumber="6" />
-		<WaitTimer questId="1" waitTime="1000" />
+		
+		<!-- Cemetery of the Forsaken Waypoint -->
+		<If condition="ActorExistsAt(6442, 2161.802, 1826.882, 2.944671, 20) and CurrentWorldId == 71150"> 
 		<MoveTo questId="1" x="2121.411" y="1776.784" z="0.345872" name="Scarry Place again..." />
 		<MoveTo questId="1" x="2109.564" y="1721.362" z="0.1000002" name="Gate" />
 		<MoveTo questId="1" x="2092.159" y="1645.138" z="0.07358073" name="Bridge start" />
 		<MoveTo questId="1" x="2091.772" y="1568.519" z="6.686148" name="Bridge mid" />
 		<MoveTo questId="1" x="2096.331" y="1500.119" z="0.05657427" name="Bridge end" />
+		<MoveTo questId="1" x="2099.203" y="1507.181" z="-0.1465454" name="Checkpoint" />
+		<WaitTimer questId="1" waitTime="250" />
+		</If>
+		
+		<!-- Checkpoint at Fields of Misery from Bridge -->
+		<If condition="ActorExistsAt(3795, 2099.203, 1507.181, -0.1465454, 20) and CurrentWorldId == 71150"> 
 		<MoveTo questId="1" x="2099.32" y="1441.401" z="0.09999979" name="FoM #1" />
 		<MoveTo questId="1" x="2069.925" y="1269.682" z="0.1" name="FoM #2" />
 		<MoveTo questId="1" x="2082.645" y="1108.837" z="0.1000007" name="FoM #3" />
@@ -24,13 +38,18 @@
 		<MoveTo questId="1" x="2105.049" y="970.2248" z="0.1000005" name="FoM #7" />
 		<MoveTo questId="1" x="2234.569" y="1004.596" z="0.1000002" name="FoM #8" />
 		<MoveTo questId="1" x="2283.82" y="1047.148" z="0.1000002" name="FoM #Check" />
-		<If condition="ActorExistsAt(78030, 2243.831, 1070.652, 0.2, 10) and Zeta.ZetaDia.CurrentWorldId==71150">
+		<WaitTimer questId="1" waitTime="250" />
+		</If>
+		
+		<!-- Check for Scarecrow -->
+		<If condition="ActorExistsAt(78030, 2243.831, 1070.652, 0.2, 10) and CurrentWorldId==71150">
 			<MoveTo questId="1" x="2280.027" y="1069.003" z="0.1000002" name="To get it" />
 			<MoveTo questId="1" x="2243.831" y="1070.652" z="0.2" name="Click Click" />
-			<WaitTimer questId="1" waitTime="5000" />
-			<UseObject questId="1" actorId="78030" x="2243.831" y="1070.652" z="0.2" isPortal="False" />
+			<WaitTimer questId="1" waitTime="1500" />
 			<MoveTo questId="1" x="2248.932" y="1058.559" z="0.2" name="Its over" />
 		</If>
+		
+		<If condition="CurrentWorldId==71150">
 		<MoveTo questId="1" x="2269.214" y="1106.785" z="0.1000002" name="FoM #9" />
 		<MoveTo questId="1" x="2364.017" y="983.1815" z="0.1000002" name="FoM #10" />
 		<MoveTo questId="1" x="2404.808" y="955.7382" z="0.1000002" name="FoM #11" />
@@ -42,15 +61,22 @@
 		<MoveTo questId="1" x="2073.154" y="736.8131" z="0.1000029" name="FoM #17" />
 		<MoveTo questId="1" x="2050.701" y="637.7709" z="0.1" name="FoM #18" />
 		<MoveTo questId="1" x="2150.911" y="588.2034" z="0.09999999" name="FoM #19" />
-		<If condition="ActorExistsAt(78030, 2111.576, 612.8109, 0.2, 10) and Zeta.ZetaDia.CurrentWorldId==71150">
+		<WaitTimer questId="1" waitTime="250" />
+		</If>
+		
+		<!-- Check for Scarecrow -->
+		<If condition="ActorExistsAt(78030, 2111.576, 612.8109, 0.2, 10) and CurrentWorldId==71150">
 			<MoveTo questId="1" x="2113.426" y="612.1709" z="0.2" name="Click Click" />
-			<WaitTimer questId="1" waitTime="5000" />
-			<UseObject questId="1" actorId="78030" x="2113.426" y="612.1709" z="0.2" isPortal="False" />
+			<WaitTimer questId="1" waitTime="1500" />
 			<MoveTo questId="1" x="2117.412" y="598.6658" z="0.2" name="To get it" />
 			<MoveTo questId="1" x="2140.051" y="625.8022" z="0.1" name="Its over" />
 		</If>
+		
+		<If condition="CurrentWorldId==71150">
 		<MoveTo questId="1" x="2131.725" y="458.1083" z="0.1" name="FoM #20" />
-		<MoveTo questId="1" x="2131.725" y="458.1083" z="0.1" name="FoM #21" />
+		<MoveTo questId="1" x="2099.149" y="437.1093" z="0.1000004" pathPrecision="3" />
+		<MoveTo questId="1" x="2034.371" y="486.1959" z="0.1" pathPrecision="3" />
+		<MoveTo questId="1" x="1891.047" y="364.4456" z="0.1" pathPrecision="3" />
 		<MoveTo questId="1" x="1803.423" y="310.4841" z="0.1" name="FoM #22" />
 		<MoveTo questId="1" x="1865.47" y="222.6739" z="0.1000001" name="FoM #23" />
 		<MoveTo questId="1" x="1688.015" y="256.6546" z="0.1" name="FFoM #24" />
@@ -65,8 +91,16 @@
 		<MoveTo questId="1" x="1683.46" y="748.9196" z="0.100001" name="FoM #33" />
 		<MoveTo questId="1" x="1673.615" y="456.8197" z="0.1000005" name="FoM #34" />
 		<MoveTo questId="1" x="1609.576" y="369.2259" z="0.1000001" name="Chuck Chuck" />
-		<!-- Fields of Misery -Complete- -->
-		<UseTownPortal questId="1" />
-		<Continue profile="Antidote_SouthNorthHighlandsA.xml, Antidote_SouthNorthHighlandsB.xml" />
+		</If>
+		
+		<If condition="(not Me.IsInTown)">   
+			<While condition="not Me.IsInTown">
+				<UseTownPortal questId="1" />  
+			</While>
+		</If>
+		
+		<WaitTimer questId="1" waitTime="5000" />
+		<Continue profile="Mint_SouthNorthHighlandsA.xml, Mint_SouthNorthHighlandsB.xml" />
+		
 	</Order>
 </Profile>

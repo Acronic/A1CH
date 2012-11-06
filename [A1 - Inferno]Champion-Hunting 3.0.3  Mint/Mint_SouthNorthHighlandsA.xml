@@ -1,21 +1,29 @@
 <Profile>
-	<Name>[A1 - Inferno] Champion-Hunting 2.2.2 Antidote - Southern and Northern Highlands A</Name>
+	<Name>[A1 - Inferno] Champion-Hunting 3.0.3 Mint - Southern and Northern Highlands A</Name>
 	<KillMonsters>True</KillMonsters>
 	<PickupLoot>True</PickupLoot>
 	<GameParams quest="72801" step="36" act="A1" difficulty="Inferno" resumeFromSave="False" isPrivate="True" numGames="-1"  />
 	<Order>
-		<If condition="(not Me.IsInTown)">   
-			<UseTownPortal questId="1" />       
+	
+	
+		<!-- From Town -->
+		<If condition="Me.IsInTown">
+			<MoveTo questId="1" x="2981.259" y="2836.146" z="24.89399" />
+			<WaitTimer questId="1" waitTime="150" />
+			<While condition="Me.IsInTown">
+				<UseWaypoint questId="1" actorId="223757" x="2981.259" y="2836.146" z="24.89399" waypointNumber="11" />	
+			</While>		
+			<WaitTimer questId="1" waitTime="150" />
 		</If>
-		<!-- Highlands -->
-		<UseWaypoint questId="1" actorId="223757" x="2981.259" y="2836.146" z="24.89399" waypointNumber="11" />
-		<WaitTimer questId="1" waitTime="1000" />
+		
+		<!-- Highlands Crossing WP-->
+		<If condition="ActorExistsAt(6442, 2310.5, 4770, 1.795728, 40) and ZetaDia.CurrentWorldId == 71150"> 
+		<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="80" killRadius="60" />
 		<MoveTo questId="1" x="2312.044" y="4781.09" z="0.1330277" name="Crossing #1" pathPrecision="1" />
 		<MoveTo questId="1" x="2324.725" y="4806.493" z="1.280544" name="Crossing #2" pathPrecision="1" />
 		<MoveTo questId="1" x="2320.613" y="4839.235" z="1.280544" name="Crossing #3" pathPrecision="1" />
 		<MoveTo questId="1" x="2340.341" y="4866.82" z="1.026065" name="Crossing #4" pathPrecision="1" />
 		<MoveTo questId="1" x="2363.489" y="4869.822" z="-0.7079399" name="Crossing #5" pathPrecision="1" />
-		<ToggleTargeting questId="1" combat="False" looting="False" lootRadius="80" killRadius="60" />
 		<MoveTo questId="1" x="2385.67" y="4813.822" z="1.798094" name="Bridge #1" pathPrecision="1" />
 		<MoveTo questId="1" x="2386.778" y="4782.811" z="7.557386" name="Bridge #2" pathPrecision="1" />
 		<MoveTo questId="1" x="2388.903" y="4733.329" z="7.557386" name="Bridge #3" pathPrecision="1" />
@@ -56,9 +64,13 @@
 		<MoveTo questId="1" x="2089.274" y="3971.462" z="0.1" name="S-Highlands #40" pathPrecision="1" />
 		<MoveTo questId="1" x="2000.036" y="3961.47" z="0.1" name="S-Highlands #41" pathPrecision="1" />
 		<MoveTo questId="1" x="1970.774" y="4051.558" z="0.1" name="S-Highlands #42" pathPrecision="1" />
-		<WaitTimer questId="1" waitTime="50" />
 		<MoveTo questId="1" x="1929.922" y="4092.755" z="0.1000026" name="S-Highlands #42 (Road)" pathPrecision="1" />
-		<WaitTimer questId="1" waitTime="50" />
+		<MoveTo questId="1" x="1920" y="4080.352" z="0.170166" name="S-Highlands #42 (Road)" pathPrecision="1" />
+		<WaitTimer questId="1" waitTime="250" />
+		</If>
+		
+		<!-- Checkpoint before road to Northern Highlands-->
+		<If condition="ActorExistsAt(3795, 1920, 4080.352, 0.170166, 40) and ZetaDia.CurrentWorldId == 71150"> 
 		<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="30" killRadius="10" />  
 		<MoveTo questId="1" x="1909.619" y="4036.328" z="3.739423" name="Road #1" pathPrecision="2" />
 		<WaitTimer questId="1" waitTime="50" />
@@ -77,6 +89,11 @@
 		<MoveTo questId="1" x="1819.738" y="4049.477" z="30.06423" name="Road #END Unstuckhelper 2" pathPrecision="2" />
 		<MoveTo questId="1" x="1810.021" y="4016.605" z="30.09036" name="Road #END" pathPrecision="1" />
 		<MoveTo questId="1" x="1752.509" y="4020.202" z="39.40556" name="Road #END" pathPrecision="1" />
+		<WaitTimer questId="1" waitTime="250" />
+		</If>
+		
+		<!-- Checkpoint after road to Northern Highlands-->
+		<If condition="ActorExistsAt(3795, 1780, 4022.5, 36.82759, 40) and ZetaDia.CurrentWorldId == 71150"> 
 		<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="80" killRadius="60" /> 
 		<MoveTo questId="1" x="1723.338" y="4022.181" z="38.1" name="N-Highlands #1" pathPrecision="1" />
 		<MoveTo questId="1" x="1705.951" y="3970.993" z="40.1" name="N-Highlands #2" pathPrecision="1" />
@@ -94,8 +111,17 @@
 		<MoveTo questId="1" x="1420.318" y="4139.634" z="40.10202" name="N-Highlands #14" pathPrecision="1" />
 		<MoveTo questId="1" x="1407.156" y="4087.122" z="40.10117" name="N-Highlands #15" pathPrecision="1" />
 		<MoveTo questId="1" x="1428.689" y="4018.868" z="38.15237" name="N-Highlands #16" pathPrecision="1" />
-		<UseTownPortal questId="1" />
-		<Continue profile="Antidote_OldTristram.xml"/>
-		<!-- Highlands Crossing & Leorics -Complete- -->
+		</If>
+		
+		<If condition="(not Me.IsInTown)">   
+			<UseTownPortal questId="1" />  
+				<While condition="not Me.IsInTown">
+					<WaitTimer questId="1" waitTime="50" />
+				</While>
+		</If>
+		
+		<WaitTimer questId="1" waitTime="5000" />
+		<Continue profile="Mint_START_HERE.xml" exitgame="true" />
+		
 	</Order>
 </Profile>

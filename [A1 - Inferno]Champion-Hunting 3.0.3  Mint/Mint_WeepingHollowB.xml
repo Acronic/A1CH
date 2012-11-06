@@ -1,17 +1,24 @@
 <Profile>
-	<Name>[A1 - Inferno] Champion-Hunting 2.2.2 Antidote - Weeping Hollow B</Name>
+	<Name>[A1 - Inferno] Champion-Hunting 3.0.3 Mint - Weeping Hollow B</Name>
 	<KillMonsters>True</KillMonsters>
 	<PickupLoot>True</PickupLoot>
 	<GameParams quest="72801" step="36" act="A1" difficulty="Inferno" resumeFromSave="False" isPrivate="True" numGames="-1"  />
 	<Order>
-		<If condition="(not Me.IsInTown)">   
-			<UseTownPortal questId="1" />       
-		</If>
-		<!-- WEEPING HOLLOW -->
-		<MoveTo questId="1" x="2981.259" y="2836.146" z="24.89399" pathPrecision="1" />
-		<UseWaypoint questId="1" actorId="223757" x="2981.259" y="2836.146" z="24.89399" waypointNumber="6" />
-		<WaitTimer questId="1" waitTime="1000" />
-		<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="40" killRadius="30" />
+	
+	
+		<!-- From Town -->
+		<If condition="Me.IsInTown">
+			<MoveTo questId="1" x="2981.259" y="2836.146" z="24.89399" />
+			<WaitTimer questId="1" waitTime="150" />
+			<While condition="Me.IsInTown">
+				<UseWaypoint questId="1" actorId="223757" x="2981.259" y="2836.146" z="24.89399" waypointNumber="6" />	
+			</While>		
+			<WaitTimer questId="1" waitTime="150" />
+		</If>z
+		
+		<!-- Cemetery of the Forsaken Waypoint -->
+		<If condition="ActorExistsAt(6442, 2161.802, 1826.882, 2.944671, 20) and CurrentWorldId == 71150"> 
+		<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="30" killRadius="30" />
 		<MoveTo questId="1" x="2149.099" y="1868.173" z="0.4677601" name="Scarry Place 1" pathPrecision="1" unsafeRandomDistance="5" />
 		<MoveTo questId="1" x="2114.951" y="1892.535" z="0.6034967" name="Scarry Place 2" pathPrecision="1" unsafeRandomDistance="5" />
 		<MoveTo questId="1" x="2052.489" y="1886.321" z="0.1000009" name="Scarry Place 3" pathPrecision="1" unsafeRandomDistance="5" />
@@ -26,8 +33,14 @@
 		<MoveTo questId="1" x="2187.826" y="1897.035" z="0.1000002" name="Scarry Place 12" pathPrecision="1" unsafeRandomDistance="5" />
 		<MoveTo questId="1" x="2215.658" y="1859.501" z="0.6034969" name="Scarry Place 13" pathPrecision="1" unsafeRandomDistance="5" />
 		<MoveTo questId="1" x="2215.658" y="1859.501" z="0.6034969" name="Scarry Place 14" pathPrecision="2" />
+		<MoveTo questId="1" x="2267.5" y="1860" z="0.1552734" name="Gate #1" />
+		<WaitTimer questId="1" waitTime="250" />
+		</If>
+		
+		
+		<!-- Weeping Hollow Checkpoint -->
+		<If condition="ActorExistsAt(3795, 2267.5, 1860, 0.1552734, 40) and CurrentWorldId == 71150"> 
 		<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="80" killRadius="60" />
-		<WaitTimer questId="1" waitTime="1000" />
 		<MoveTo questId="1" x="2320.643" y="1859.332" z="0.4109634" name="Hollow #1" pathPrecision="1" unsafeRandomDistance="5" />
 		<MoveTo questId="1" x="2430.899" y="1679.952" z="0.1000001" name="Hollow #2" pathPrecision="1" unsafeRandomDistance="5" />
 		<MoveTo questId="1" x="2529.7" y="1746.657" z="0.1" name="Hollow #3" pathPrecision="1" unsafeRandomDistance="5" />
@@ -36,6 +49,8 @@
 		<MoveTo questId="1" x="2852.723" y="1840.089" z="0.1000002"  name="Hollow #6" pathPrecision="1" unsafeRandomDistance="5" />
 		<MoveTo questId="1" x="2903.948" y="1911.146" z="0.1000019" name="Hollow #7" pathPrecision="1" unsafeRandomDistance="5" />
 		<MoveTo questId="1" x="2960.87" y="1902.823" z="0.1" name="Hollow #8" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2931.848" y="1989.478" z="0.09999978" pathPrecision="3" />
+		<MoveTo questId="1" x="2949.49" y="2171.531" z="0.1" pathPrecision="3" />
 		<MoveTo questId="1" x="2978.952" y="2250.254" z="0.09999976" name="Hollow #9" pathPrecision="1" unsafeRandomDistance="5" />
 		<MoveTo questId="1" x="2907.767" y="2375.977" z="0.1095704" name="Hollow #10" pathPrecision="1" unsafeRandomDistance="5" />
 		<MoveTo questId="1" x="2861.432" y="2356.91" z="-0.4439365" name="Hollow #11" pathPrecision="1" unsafeRandomDistance="5" />
@@ -44,6 +59,7 @@
 		<MoveTo questId="1" x="2813.147" y="2144.183" z="0.1000157" name="Hollow #14" pathPrecision="1" unsafeRandomDistance="5" />
 		<MoveTo questId="1" x="2940.614" y="2033.162" z="0.09999999" name="Hollow #15" pathPrecision="1" unsafeRandomDistance="5" />
 		<MoveTo questId="1" x="2691.387" y="2039.095" z="0.1000153" name="Hollow #16" pathPrecision="1" unsafeRandomDistance="5" />
+		<MoveTo questId="1" x="2703.705" y="2061.429" z="0.1000155" pathPrecision="3" />
 		<MoveTo questId="1" x="2707.418" y="2286.238" z="0.1000002" name="Hollow #17" pathPrecision="1" unsafeRandomDistance="5" />
 		<MoveTo questId="1" x="2675.093" y="2285.856" z="0.1000002" name="Hollow #18" pathPrecision="1" unsafeRandomDistance="5" />
 		<MoveTo questId="1" x="2559.175" y="2179.594" z="0.1127139" name="Hollow #19" pathPrecision="1" unsafeRandomDistance="5" />
@@ -55,8 +71,15 @@
 		<MoveTo questId="1" x="2681.77" y="1914.086" z="0.1" name="Hollow #25" pathPrecision="1" unsafeRandomDistance="5" />
 		<MoveTo questId="1" x="2659.359" y="2171.529" z="0.09999994" name="Hollow #26" pathPrecision="1" unsafeRandomDistance="5" />
 		<MoveTo questId="1" x="2436.226" y="1993.609" z="0.1000001" name="Hollow #27" pathPrecision="1" unsafeRandomDistance="5" />
-		<!-- Weeping Hollow -Complete- -->
-		<UseTownPortal questId="1" />
-		<Continue profile="Antidote_FieldsofMiseryA.xml, Antidote_FieldsofMiseryB.xml" />
+		</If>
+		
+		<If condition="(not Me.IsInTown)">   
+			<While condition="not Me.IsInTown">
+				<UseTownPortal questId="1" />  
+			</While>
+		</If>
+		
+		<WaitTimer questId="1" waitTime="5000" />
+		<Continue profile="Mint_FieldsofMiseryA.xml, Mint_FieldsofMiseryB.xml" />
 	</Order>
 </Profile>

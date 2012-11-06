@@ -1,0 +1,292 @@
+<Profile>
+	<Name>[A1 - Inferno] Champion-Hunting 3.0.3 Mint - Festering Woods B</Name>
+	<KillMonsters>True</KillMonsters>
+	<PickupLoot>True</PickupLoot>
+	<GameParams quest="72801" step="36" act="A1" difficulty="Inferno" resumeFromSave="False" isPrivate="True" numGames="-1"  />
+	<Order>
+	
+		<!-- From Town -->
+		<If condition="Me.IsInTown">
+			<MoveTo questId="1" x="2981.259" y="2836.146" z="24.89399" />
+			<WaitTimer questId="1" waitTime="150" />
+			<While condition="Me.IsInTown">
+				<UseWaypoint questId="1" actorId="223757" x="2981.259" y="2836.146" z="24.89399" waypointNumber="8" />	
+			</While>		
+			<WaitTimer questId="1" waitTime="150" />
+		</If>
+		
+		<!-- Drowned Temple WP -->
+		<If condition="ActorExistsAt(6442, 1262.5, 827.5, 64.13434, 40) and CurrentWorldId == 71150"> 
+		<MoveTo questId="1" x="1261.164" y="795" z="61.18317" pathPrecision="3"  />
+		<MoveTo questId="1" x="1257.316" y="748.7548" z="44.86697" pathPrecision="3"  />
+		<MoveTo questId="1" x="1211.165" y="747.8185" z="44.96663" pathPrecision="3"  />
+		<MoveTo questId="1" x="1191.561" y="738.3638" z="45.28707" pathPrecision="3"  />
+		<MoveTo questId="1" x="1177.492" y="737.3071" z="50.66218" pathPrecision="3"  />
+		<MoveTo questId="1" x="1078.44" y="737.511" z="50.65845" pathPrecision="3"  />
+		<MoveTo questId="1" x="1051.531" y="737.0928" z="40.63093" name="Checkpoint Bridge" pathPrecision="1" />
+		<WaitTimer questId="1" waitTime="250" />
+		</If>
+		
+		<!-- Checkpoint on Bridge -->
+		<If condition="ActorExistsAt(3795, 1051.531, 737.0928, 40.63093, 40) and CurrentWorldId == 71150"> 
+		<MoveTo questId="1" x="1048.572" y="734.0878" z="40.74343" pathPrecision="3"  />
+		<MoveTo questId="1" x="993.5056" y="748.4973" z="40.61337" pathPrecision="3"  />
+		<MoveTo questId="1" x="917.0761" y="772.1482" z="25.73251" pathPrecision="3"  />
+		<MoveTo questId="1" x="870.8115" y="779.5339" z="21.06641" pathPrecision="3"  />
+		<MoveTo questId="1" x="825.5729" y="723.2161" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="747.428" y="689.0065" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="681.3929" y="654.4581" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="621.4973" y="612.7179" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="604.4721" y="729.986" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="549.9586" y="719.5341" z="20.1" name="Looking for Warrior's Rest #2" pathPrecision="1" />
+		<WaitTimer questId="1" waitTime="250" />
+		</If>
+
+		<!-- Check Warriors Rest #2 -->
+		<If condition="ActorExistsAt(176008, 522.1671, 666.3508, 16.07448, 15) and CurrentLevelAreaId == 19947">
+		<ToggleTargeting questId="1" combat="False" looting="False" lootRadius="70" killRadius="30" />
+		<WaitTimer waitTime="100" />
+		<MoveTo questId="1" x="529.9656" y="697.098" z="20.15804" name="In #1" pathPrecision="1" />
+		<While condition="CurrentWorldId==71150">
+		<UseObject questId="1" x="522.9739" y="683.4981" z="17.80379" actorId="176008" isPortal="True" destinationWorldId="60393" />
+		</While>
+		<WaitTimer questId="1" waitTime="250" />
+		</If>
+		
+		<If condition="CurrentWorldId==71150">
+		<MoveTo questId="1" x="473.5132" y="723.2318" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="407.474" y="716.5413" z="20.1" name="Looking for Warrior's Rest #1" pathPrecision="1" />
+		<WaitTimer questId="1" waitTime="250" />
+		</If>
+		
+		<!-- Check Warriors Rest #1 -->
+		<If condition="ActorExistsAt(176008, 401.3656, 666.1225, 16.08049, 15) and CurrentWorldId == 71150">
+		<ToggleTargeting questId="1" combat="False" looting="False" lootRadius="70" killRadius="30" />
+		<WaitTimer waitTime="100" />
+		<MoveTo questId="1" x="435.7175" y="705.076" z="20.1" name="In #1" pathPrecision="1" />
+		<MoveTo questId="1" x="443.6703" y="691.9478" z="20.14273" name="In #2" pathPrecision="1" />
+		<MoveTo questId="1" x="428.9582" y="677.72" z="15.85017" name="In #3" pathPrecision="1" />
+		<MoveTo questId="1" x="410.9895" y="674.8193" z="15.83524" name="In #4" pathPrecision="1" />
+		<While condition="CurrentWorldId==71150">
+		<UseObject questId="1" x="406.51" y="670.9689" z="15.95396" actorId="176008" isPortal="True" destinationWorldId="60393" />
+		</While>
+		<WaitTimer questId="1" waitTime="250" />
+		</If>
+		
+		<If condition="CurrentWorldId==71150">
+		<MoveTo questId="1" x="360.6859" y="724.6028" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="325.0707" y="724.7598" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="245.7476" y="722.0615" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="228.4338" y="664.8621" z="20.1" name="Looking for Warrior's Rest #3" pathPrecision="1" />
+		<WaitTimer questId="1" waitTime="250" />
+		</If>
+		
+		<!-- Check Warriors Rest #3 -->
+		<If condition="ActorExistsAt(176008, 285.247, 666.2519, 16.06892, 15) and CurrentWorldId == 71150">
+		<ToggleTargeting questId="1" combat="False" looting="False" lootRadius="70" killRadius="30" />
+		<WaitTimer waitTime="100" />
+		<MoveTo questId="1" x="279.0309" y="724.4062" z="20.1" name="In #1" pathPrecision="1" />
+		<MoveTo questId="1" x="305.1674" y="714.014" z="20.1" name="In #2" pathPrecision="1" />
+		<MoveTo questId="1" x="321.4475" y="693.8344" z="20.17813" name="In #3" pathPrecision="1" />
+		<MoveTo questId="1" x="313.0526" y="678.5666" z="15.85017" name="In #4" pathPrecision="1" />
+		<MoveTo questId="1" x="287.9381" y="672.7042" z="15.82301" name="In #5" pathPrecision="1" />
+		<While condition="CurrentWorldId==71150">
+		<UseObject questId="1" x="285.5723" y="668.7137" z="16.03158" actorId="176008" isPortal="True" destinationWorldId="60393" />
+		</While>
+		<WaitTimer questId="1" waitTime="250" />
+		</If>
+		
+		<!-- Warriors Rest -->
+		<If condition="CurrentWorldId == 60393">
+		<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="30" />
+		<WaitTimer waitTime="100" />
+		<MoveTo name="Step 1" questId="1" x="374.8354" y="285.2496" z="0.1000205" />
+		<MoveTo name="Step 2" questId="1" x="335.8906" y="297.6104" z="0.1000305" />
+		<MoveTo name="Step 3" questId="1" x="287.7101" y="314.6879" z="7.308491" />
+		<MoveTo name="Step 4" questId="1" x="265.7111" y="324.843" z="7.751245" />
+		<MoveTo name="Step 5" questId="1" x="236.8198" y="339.7128" z="0.5523124" />
+		<MoveTo name="Step 6" questId="1" x="212.5869" y="358.4189" z="0.10003" />
+		<MoveTo name="Step 7" questId="1" x="186.1447" y="370.7687" z="0.1000176" />
+		<MoveTo questId="1" x="402.1971" y="267.5492" z="0.1000305" pathPrecision="5" />
+		<WaitTimer waitTime="250" />
+		<ToggleTargeting questId="1" combat="False" looting="False" lootRadius="70" killRadius="30" />
+		<While condition="CurrentWorldId==71150">
+		<UseObject questId="1" x="418.5931" y="246.5663" z="4.314868" actorId="176008" isPortal="True" destinationWorldId="71150" />
+		</While>
+		<WaitTimer waitTime="250" />
+		</If>
+		
+		<!--  Warriors Rest Exit #2 -->
+		<If condition="ActorExistsAt(176008, 522.1671, 666.3508, 16.07448, 15) and CurrentWorldId == 71150">
+		<MoveTo questId="1" x="539.9099" y="678.2449" z="15.85017" name="Out #1" pathPrecision="1" />
+		<MoveTo questId="1" x="553.3206" y="696.8945" z="20.15821" name="Out #2" pathPrecision="1" />
+		<MoveTo questId="1" x="553.1098" y="716.242" z="20.1" name="Out #3" pathPrecision="1" />
+		<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="30" />
+		<MoveTo questId="1" x="473.5132" y="723.2318" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="407.474" y="716.5413" z="20.1" name="Looking for Warrior's Rest #1" pathPrecision="1" />
+		<MoveTo questId="1" x="360.6859" y="724.6028" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="325.0707" y="724.7598" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="245.7476" y="722.0615" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="228.4338" y="664.8621" z="20.1" name="Looking for Warrior's Rest #3" pathPrecision="1" />
+		<MoveTo questId="1" x="180.9355" y="728.2045" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="220.1993" y="812.1515" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="204.9544" y="891.0021" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="179.4563" y="921.3693" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="226.9114" y="985.4202" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="296.1826" y="955.2207" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="370.9303" y="960.3871" z="20.1" name="Looking for CotA #3" pathPrecision="1" />
+		<WaitTimer questId="1" waitTime="250" />
+		</If>
+		
+		<!--  Warriors Rest Exit #1 -->
+		<If condition="ActorExistsAt(176008, 401.3656, 666.1225, 16.08049, 15) and CurrentWorldId == 71150">
+		<MoveTo questId="1" x="428.9582" y="677.72" z="15.85017" name="Out #1" pathPrecision="1" />
+		<MoveTo questId="1" x="438.7513" y="676.563" z="15.8467" name="Out #2" pathPrecision="1" />
+		<MoveTo questId="1" x="455.0528" y="680.8185" z="20.23763" name="Out #3" pathPrecision="1" />
+		<MoveTo questId="1" x="486.0042" y="719.1387" z="20.1" name="Out #4" pathPrecision="1" />
+		<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="30" />
+		<MoveTo questId="1" x="360.6859" y="724.6028" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="325.0707" y="724.7598" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="245.7476" y="722.0615" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="228.4338" y="664.8621" z="20.1" name="Looking for Warrior's Rest #3" pathPrecision="1" />
+		<MoveTo questId="1" x="180.9355" y="728.2045" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="220.1993" y="812.1515" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="204.9544" y="891.0021" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="179.4563" y="921.3693" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="226.9114" y="985.4202" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="296.1826" y="955.2207" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="370.9303" y="960.3871" z="20.1" name="Looking for CotA #3" pathPrecision="1" />
+		<WaitTimer questId="1" waitTime="250" />
+		</If>
+		
+		<!--  Warriors Rest Exit #3 -->
+		<If condition="ActorExistsAt(176008, 285.247, 666.2519, 16.06892, 15)  and CurrentWorldId == 71150">
+		<MoveTo questId="1" x="282.5" y="677.9363" z="15.84901" name="Out #1" pathPrecision="3" />
+		<MoveTo questId="1" x="313.0526" y="678.5666" z="15.85017" name="Out #1" pathPrecision="3" />
+		<MoveTo questId="1" x="321.4475" y="693.8344" z="20.17813" name="Out #2" pathPrecision="1" />
+		<MoveTo questId="1" x="305.1674" y="714.014" z="20.1" name="Out #3" pathPrecision="1" />
+		<MoveTo questId="1" x="279.0309" y="724.4062" z="20.1" name="Out #4" pathPrecision="1" />
+		<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="30" />
+		<MoveTo questId="1" x="180.9355" y="728.2045" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="220.1993" y="812.1515" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="204.9544" y="891.0021" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="179.4563" y="921.3693" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="226.9114" y="985.4202" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="296.1826" y="955.2207" z="20.1" pathPrecision="3"  />
+		<MoveTo questId="1" x="370.9303" y="960.3871" z="20.1" name="Looking for CotA #3" pathPrecision="1" />
+		<WaitTimer questId="1" waitTime="250" />
+		</If>
+		
+		<!-- Check COTA #3 -->
+		<If condition="ActorExistsAt(176008, 306.6887, 876.4686, 16.03057, 15) and CurrentWorldId==71150">
+		<ToggleTargeting questId="1" combat="False" looting="False" lootRadius="70" killRadius="30" />
+		<WaitTimer waitTime="100" />
+		<MoveTo questId="1" x="338.6352" y="920.71" z="20.1273" name="In #1" pathPrecision="1"/>
+		<MoveTo questId="1" x="324.7045" y="898.0819" z="17.88341" name="In #2" pathPrecision="1"/>
+		<MoveTo questId="1" x="323.1196" y="887.4232" z="17.39608" name="In #3" pathPrecision="1"/>
+		<While condition="CurrentWorldId==71150">
+		<UseObject questId="1" x="315.0742" y="880.1865" z="15.85664" actorId="176008" isPortal="True" destinationWorldId="60394" />
+		</While>
+		<WaitTimer questId="1" waitTime="250" />
+		</If>
+		
+		
+		<If condition="CurrentWorldId==71150">
+		<MoveTo questId="1" x="433.91" y="965.3154" z="20.1" name="Looking for CotA #2" pathPrecision="1" />
+		<WaitTimer questId="1" waitTime="250" />
+		</If>
+		
+		<!-- Check COTA #2 -->
+		<If condition="ActorExistsAt(176008, 428.1892, 878.0865, 16.03252, 15) and CurrentWorldId==71150">
+			<ToggleTargeting questId="1" combat="False" looting="False" lootRadius="70" killRadius="30" />
+			<WaitTimer waitTime="100" />
+			<MoveTo questId="1" x="471.5331" y="928.3871" z="20.1" name="In #1" pathPrecision="1" />
+			<MoveTo questId="1" x="452.0205" y="918.7938" z="20.23692" name="In #2" pathPrecision="1" />
+			<MoveTo questId="1" x="440.5163" y="900.6396" z="16.39473" name="In #3" pathPrecision="1" />
+			<MoveTo questId="1" x="438.1875" y="884.9135" z="15.97724" name="In #4" pathPrecision="1" />
+			<While condition="CurrentWorldId==71150">
+			<UseObject questId="1" x="434.8253" y="883.5191" z="15.85076" actorId="176008" isPortal="True" destinationWorldId="60394" />
+			</While>
+			<WaitTimer questId="1" waitTime="250" />
+		</If>
+		
+		<If condition="CurrentWorldId==71150">
+		<MoveTo questId="1" x="600.9124" y="906.9619" z="20.1" name="Looking for CotA #1" pathPrecision="1" />
+		<WaitTimer questId="1" waitTime="250" />
+		</If>
+		
+		<!-- Check COTA #1 -->
+		<If condition="ActorExistsAt(176008, 546.2001, 876.5851, 16.02718, 15) and CurrentWorldId==71150">
+			<ToggleTargeting questId="1" combat="False" looting="False" lootRadius="70" killRadius="30" />
+			<WaitTimer waitTime="100" />
+			<MoveTo questId="1" x="581.181" y="920.6775" z="20.1" name="In #1" pathPrecision="1" />
+			<MoveTo questId="1" x="568.0519" y="912.9675" z="19.69943" name="In #2" pathPrecision="1" />
+			<MoveTo questId="1" x="561.685" y="901.7787" z="16.8247" name="In #3" pathPrecision="1" />
+			<MoveTo questId="1" x="559.4897" y="887.8422" z="16.25267" name="In #4" pathPrecision="1" />
+			<While condition="CurrentWorldId==71150">
+			<UseObject questId="1" x="555.1432" y="883.5889" z="15.85017" actorId="176008" isPortal="True" destinationWorldId="60394" />
+			</While>
+			<WaitTimer questId="1" waitTime="250" />
+		</If>
+		
+		<!-- COTA  -->
+		<If condition="CurrentWorldId==60394">
+			<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="30" />
+			<MoveTo questId="1" x="318.567" y="228.7159" z="-9.290613" pathPrecision="5" />
+			<MoveTo questId="1" x="236.7522" y="361.2693" z="-16.84969" pathPrecision="5" />
+			<MoveTo questId="1" x="148.5845" y="338.6848" z="-14.60206" pathPrecision="5" />
+			<MoveTo questId="1" x="256.621" y="381.7021" z="-17.75699" pathPrecision="5" />
+			<MoveTo questId="1" x="298.8536" y="379.7181" z="-37.90237" pathPrecision="5" />
+			<MoveTo questId="1" x="236.1708" y="376.3336" z="-15.05489" pathPrecision="1" />
+			<MoveTo questId="1" x="297.7783" y="250.1982" z="-10.12247" pathPrecision="1" />
+			<MoveTo questId="1" x="285.0051" y="201.6187" z="-6.497152" pathPrecision="1" />
+			<WaitTimer waitTime="500" />
+			<ToggleTargeting questId="1" combat="False" looting="False" lootRadius="70" killRadius="30" />
+			<While condition="CurrentWorldId==60394">
+			<UseObject questId="1" x="273.4551" y="184.6861" z="-5.969828" actorId="176008" isPortal="True" destinationWorldId="71150" />
+			</While>
+			<WaitTimer questId="1" waitTime="250" />
+		</If>
+		
+		<!--  COTA Exit #3 -->
+		<If condition="ActorExistsAt(176008, 306.6887, 876.4686, 16.03057, 15)  and Zeta.ZetaDia.CurrentWorldId==71150">
+			<MoveTo questId="1" x="323.1196" y="887.4232" z="17.39608" name="Out #1" pathPrecision="1"/>
+			<MoveTo questId="1" x="324.7045" y="898.0819" z="17.88341" name="Out #2" pathPrecision="1"/>
+			<MoveTo questId="1" x="338.6352" y="920.71" z="20.1273" name="Out #3" pathPrecision="1"/>
+			<MoveTo questId="1" x="356.9457" y="932.0084" z="20.1" name="Out #4" pathPrecision="1" />
+			<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="30" />	
+		</If>
+		
+		<!--  COTA Exit #2 -->
+		<If condition="ActorExistsAt(176008, 428.1892, 878.0865, 16.03252, 15) and CurrentWorldId==71150">
+			<MoveTo questId="1" x="438.1875" y="884.9135" z="15.97724" name="Out #1" pathPrecision="1" />
+			<MoveTo questId="1" x="440.5163" y="900.6396" z="16.39473" name="Out #2" pathPrecision="1" />
+			<MoveTo questId="1" x="452.0205" y="918.7938" z="20.23692" name="Out #3" pathPrecision="1" />
+			<MoveTo questId="1" x="471.5331" y="928.3871" z="20.1" name="Out #4" pathPrecision="1" />
+			<MoveTo questId="1" x="433.91" y="965.3154" z="20.1" name="Out #5" pathPrecision="1" />
+			<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="30" />
+			<MoveTo questId="1" x="364.1513" y="958.4421" z="20.1" name="Festering Woods #9" pathPrecision="1" unsafeRandomDistance="5" />
+		</If>
+		
+		<!-- Check COTA Exit #1 -->
+		<If condition="ActorExistsAt(176008, 546.2001, 876.5851, 16.02718, 15) and CurrentWorldId==71150">
+			<MoveTo questId="1" x="559.4897" y="887.8422" z="16.25267" name="Out #1" pathPrecision="1" />
+			<MoveTo questId="1" x="561.685" y="901.7787" z="16.8247" name="Out #2" pathPrecision="1" />
+			<MoveTo questId="1" x="568.0519" y="912.9675" z="19.69943" name="Out #3" pathPrecision="1" />
+			<MoveTo questId="1" x="581.181" y="920.6775" z="20.1" name="Out #4" pathPrecision="1" />
+			<ToggleTargeting questId="1" combat="True" looting="True" lootRadius="70" killRadius="30" />
+		</If>	
+		
+		<If condition="(not Me.IsInTown)">   
+			<While condition="not Me.IsInTown">
+				<UseTownPortal questId="1" />  
+			</While>
+		</If>
+		
+		<WaitTimer questId="1" waitTime="5000" />
+		<Continue profile="Mint_WeepingHollowA.xml, Mint_WeepingHollowB.xml" />	
+		
+	</Order>
+</Profile>
+		
+		
